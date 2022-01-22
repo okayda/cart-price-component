@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+html {
+  font-family: "Red Hat Display", sans-serif;
+}
+
 html,
 body {
   height: 100%;
@@ -17,10 +21,10 @@ body {
 }
 
 .main-article {
-  /* margin: auto; */
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 360px;
+  width: 100%;
   position: absolute;
   top: 30%;
   left: 50%;
@@ -34,6 +38,8 @@ body {
 
 .main-article .content {
   padding: 2rem 1rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .main-article .content,
@@ -46,14 +52,95 @@ body {
   text-align: center;
 }
 
-.price-content {
+.main-article .text-content .title {
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.main-article .text-content .discription {
+  color: hsl(224, 23%, 55%);
+}
+
+.main-article .price-content {
   border-radius: 10px;
   padding: 1rem;
+  margin: 1.4rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: hsl(225, 100%, 98%);
 }
 
-.price-content img {
+.main-article .price-content .price {
+  display: flex;
+  align-items: center;
+}
+
+.main-article .price-content .price .type {
+  font-weight: 900;
+}
+
+.main-article .price-content .price .cost {
+  color: hsl(224, 23%, 55%);
+}
+
+.main-article .price-content .change-type {
+  font-weight: bold;
+}
+
+.main-article .price-content .change-type:hover {
+  text-decoration: none;
+}
+
+.main-article .price-content .price img {
+  margin-right: 0.8rem;
+}
+
+.main-article .btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-article .btn .submit-btn,
+.main-article .btn .cancel-btn {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.main-article .btn .submit-btn {
+  box-shadow: 0 4px 14px -2px hsl(223, 47%, 23%);
+  background-color: hsl(245, 75%, 52%);
+  color: #fff;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 10px;
+  row-gap: 1rem;
+  transition: all 250ms;
+}
+
+.main-article .btn .submit-btn:hover {
+  filter: brightness(150%);
+}
+
+.main-article .btn .cancel-btn:hover {
+  cursor: pointer;
+}
+
+.main-article .btn .cancel-btn {
+  border: none;
+  background: none;
+  color: hsl(224, 23%, 55%);
+}
+
+@media only screen and (max-width: 375px) {
+  .main-article {
+    width: 94%;
+  }
+
+  .main-article .content,
+  .main-article .bg-img {
+    width: 100%;
+    background-color: #fff;
+  }
 }

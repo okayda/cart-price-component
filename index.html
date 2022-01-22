@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -24,26 +28,27 @@
 
       <div class="content">
         <div class="text-content">
-          <h2>Order Summary</h2>
-          <p>
+          <h2 class="title">Order Summary</h2>
+          <p class="discription">
             You can now listen to millions of songs, audiobooks, and podcasts on
             any device anywhere you like!
           </p>
         </div>
         <div class="price-content">
-          <img
-            src="images/icon-music.svg"
-            alt="music-icon"
-            width="50"
-            222
-            height="50"
-          />
-          <p>
-            <strong>Annual Plan</strong>
-            <br />
-            $59.99/year
-          </p>
-          <a href="#">Change</a>
+          <div class="price">
+            <img
+              src="images/icon-music.svg"
+              alt="music-icon"
+              width="50"
+              222
+              height="50"
+            />
+            <p>
+              <span class="type">Annual Plan</span>
+              <span class="cost">$59.99/year</span>
+            </p>
+          </div>
+          <a href="#" class="change-type">Change</a>
         </div>
 
         <div class="btn">
