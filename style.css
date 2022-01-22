@@ -20,7 +20,7 @@ body {
   /* margin: auto; */
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 300px;
   position: absolute;
   top: 30%;
   left: 50%;
@@ -39,8 +39,7 @@ body {
 .main-article .content,
 .main-article .bg-img {
   width: 100%;
-  background-color: hsl(225, 100%, 98%);
-  /* padding: 1rem; */
+  background-color: #fff;
 }
 
 .main-article .text-content {
@@ -48,7 +47,12 @@ body {
 }
 
 .price-content {
-  background-color: hsl(225, 100%, 94%);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(225, 100%, 98%);
 }
 
 .price-content img {
