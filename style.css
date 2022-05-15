@@ -60,18 +60,20 @@ body {
 
 .price-card-container .about-container .card-discription {
   color: var(--desaturated-blue);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-weight: 700;
 }
 
 .price-card-container .price-content-container {
   align-items: center;
   justify-content: space-between;
-  margin: 0 1rem;
   padding: 0.8rem;
   background-color: var(--very-pale-blue);
   border-radius: 10px;
   filter: brightness(97%);
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .price-card-container .price-content-container a {
@@ -108,7 +110,9 @@ body {
 
 .price-card-container .buttons-container {
   flex-direction: column;
-  margin: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 .price-card-container .buttons-container button {
@@ -118,10 +122,15 @@ body {
   font-weight: 900;
 }
 
+.price-card-container .buttons-container button:hover {
+  cursor: pointer;
+}
+
 .price-card-container .buttons-container button:first-child {
   background-color: var(--bright-blue);
   color: var(--very-pale-blue);
   box-shadow: 0 4px 14px -2px hsl(223, 47%, 23%);
+  margin-bottom: 0.4rem;
 }
 
 .price-card-container .buttons-container button:first-child:hover {
@@ -134,8 +143,13 @@ body {
   color: var(--desaturated-blue);
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 425px) {
   .price-card-container {
     max-width: 375px;
+  }
+  .price-card-container .price-content-container,
+  .price-card-container .buttons-container {
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
   }
 }
