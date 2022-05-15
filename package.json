@@ -1,0 +1,22 @@
+{
+  "name": "cart-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "default": "index.js",
+  "scripts": {
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okayda/cart-price-component.git"
+  },
+  "author": "okayda999",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/okayda/cart-price-component/issues"
+  },
+  "homepage": "https://github.com/okayda/cart-price-component#readme",
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  }
+}

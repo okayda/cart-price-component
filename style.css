@@ -1,146 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&family=Red+Hat+Display:wght@500;700;900&display=swap");
+
 * {
+  font-family: "Red Hat Display", sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-html {
-  font-family: "Red Hat Display", sans-serif;
-}
+:root {
+  /* Primary colors */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
 
-html,
-body {
-  height: 100%;
+  /* Neutral colors */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
 }
 
 body {
   background-image: url("images/pattern-background-desktop.svg");
-  background-color: hsl(225, 100%, 94%);
+  background-color: var(--pale-blue);
   background-repeat: no-repeat;
   background-size: 100% 500px;
-}
-
-.main-article {
   display: flex;
-  flex-direction: column;
-  max-width: 360px;
-  width: 100%;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -30%);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.main-article .bg-img {
+.price-card-container {
+  background-color: var(--very-pale-blue);
+  margin: 0 0.8rem;
+  border-radius: 20px;
+}
+
+.price-card-container .price-content-container,
+.price-card-container .price-content-container .price-container,
+.price-card-container .buttons-container {
+  display: flex;
+}
+
+.price-card-container .about-container img {
+  width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-.main-article .content {
-  padding: 2rem 1rem;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.main-article .content,
-.main-article .bg-img {
-  width: 100%;
-  background-color: #fff;
-}
-
-.main-article .text-content {
+.price-card-container .about-container .about-container-content {
   text-align: center;
+  margin: 0 1.5rem;
+  font-size: 0.9rem;
 }
 
-.main-article .text-content .title {
+.price-card-container .about-container .card-title {
   font-weight: 900;
+  margin: 1rem 0;
+}
+
+.price-card-container .about-container .card-discription {
+  color: var(--desaturated-blue);
   margin-bottom: 1rem;
-}
-
-.main-article .text-content .discription {
-  color: hsl(224, 23%, 55%);
-}
-
-.main-article .price-content {
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 1.4rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: hsl(225, 100%, 98%);
-}
-
-.main-article .price-content .price {
-  display: flex;
-  align-items: center;
-}
-
-.main-article .price-content .price .type {
-  font-weight: 900;
-}
-
-.main-article .price-content .price .cost {
-  color: hsl(224, 23%, 55%);
-}
-
-.main-article .price-content .change-type {
-  font-weight: bold;
-}
-
-.main-article .price-content .change-type:hover {
-  text-decoration: none;
-}
-
-.main-article .price-content .price img {
-  margin-right: 0.8rem;
-}
-
-.main-article .btn {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.main-article .btn .submit-btn,
-.main-article .btn .cancel-btn {
-  cursor: pointer;
   font-weight: 700;
 }
 
-.main-article .btn .submit-btn {
-  box-shadow: 0 4px 14px -2px hsl(223, 47%, 23%);
-  background-color: hsl(245, 75%, 52%);
-  color: #fff;
-  border: none;
-  padding: 0.7rem;
+.price-card-container .price-content-container {
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+  padding: 0.8rem;
+  background-color: var(--very-pale-blue);
   border-radius: 10px;
-  row-gap: 1rem;
-  transition: all 250ms;
+  filter: brightness(97%);
 }
 
-.main-article .btn .submit-btn:hover {
+.price-card-container .price-content-container a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  border-bottom: 2px solid var(--bright-blue);
+  font-weight: 900;
+}
+
+.price-card-container .price-content-container .price-container img {
+  margin-right: 0.8rem;
+}
+
+.price-card-container .price-content-container .price-container .price-content {
+  font-size: 0.9rem;
+  align-self: center;
+}
+
+.price-card-container
+  .price-content-container
+  .price-container
+  .price-content
+  .price-title {
+  font-weight: 900;
+}
+
+.price-card-container
+  .price-content-container
+  .price-container
+  .price-content
+  .price {
+  color: var(--desaturated-blue);
+}
+
+.price-card-container .buttons-container {
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.price-card-container .buttons-container button {
+  padding: 0.8rem 0;
+  border: none;
+  border-radius: 10px;
+  font-weight: 900;
+}
+
+.price-card-container .buttons-container button:first-child {
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+  box-shadow: 0 4px 14px -2px hsl(223, 47%, 23%);
+}
+
+.price-card-container .buttons-container button:first-child:hover {
   filter: brightness(150%);
-}
-
-.main-article .btn .cancel-btn:hover {
   cursor: pointer;
 }
 
-.main-article .btn .cancel-btn {
-  border: none;
-  background: none;
-  color: hsl(224, 23%, 55%);
+.price-card-container .buttons-container button:last-child {
+  background-color: transparent;
+  color: var(--desaturated-blue);
 }
 
-@media only screen and (max-width: 375px) {
-  .main-article {
-    width: 94%;
-  }
-
-  .main-article .content,
-  .main-article .bg-img {
-    width: 100%;
-    background-color: #fff;
+@media only screen and (min-width: 375px) {
+  .price-card-container {
+    max-width: 375px;
   }
 }
