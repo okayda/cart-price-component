@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,40 +17,44 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Order summary card | okayda</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>summary card component</title>
   </head>
+
   <body>
-    <article class="price-card-container">
-      <header class="about-container">
-        <img src="images/illustration-hero.svg" alt="Price card image" />
+    <main>
+      <div class="bg-img">&nbsp;</div>
+      <section class="cart">
+        <img
+          src="images/illustration-hero.svg"
+          alt="person listening music"
+          class="cart__image"
+        />
 
-        <div class="about-container-content">
-          <h2 class="card-title">Order Summary</h2>
-
-          <p class="card-discription">
-            You can now listen to millions of songs, audiobooks, and podcasts on
+        <div class="cart__content">
+          <h3 class="cart__title txt-center m-bottom-medium">Order Summary</h3>
+          <p class="cart__paragraph txt-center m-bottom-medium">
+            You can now listen to millions of songs, audiobooks, and podcast on
             any device anywhere you like!
           </p>
-        </div>
-      </header>
 
-      <section class="price-content-container">
-        <div class="price-container">
-          <img src="images/icon-music.svg" alt="" />
-          <div class="price-content">
-            <h4 class="price-title">Annual Plan</h4>
-            <p class="price">$59.99/year</p>
+          <div class="cart__price m-bottom-medium">
+            <img src="images/icon-music.svg" alt="" />
+
+            <div class="cart__plans">
+              <span class="cart__plan">Annual Plan</span>
+              <span class="cart__cost">$59.99/year</span>
+            </div>
+
+            <a href="#" class="cart__link">Change</a>
+          </div>
+
+          <div class="cart__btn txt-center">
+            <a href="#" class="btn btn--dark">Proceed to Payment</a>
+            <a href="#" class="btn btn--white">Cancel Order</a>
           </div>
         </div>
-
-        <a href="#">Change</a>
       </section>
-
-      <div class="buttons-container">
-        <button class="submit-btn">Proceed to Payment</button>
-        <button class="cancel-btn">Cancel Order</button>
-      </div>
-    </article>
+    </main>
   </body>
 </html>
